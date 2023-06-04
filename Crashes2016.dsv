@@ -1,0 +1,228 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="4963b566-bede-4e3b-b970-d427be1498c8" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Crashes2016</ID>
+  <Name>Crashes2016</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Crashes2016</DataSourceID>
+  <Schema>
+    <xs:schema id="Crashes2016" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Crashes2016" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="6047ed6a-9f9d-4fd5-a3d1-a2b528ca0348">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="Collisions_DIM_CAUSE" msprop:design-time-name="0c28d8f3-3cd7-4e89-aeb2-ca449184a2b8" msprop:DbTableName="DIM_CAUSE" msprop:FriendlyName="DIM_CAUSE" msprop:DbSchemaName="Collisions" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PK_CAUSE" msprop:design-time-name="ebd4495d-91fe-4796-96a7-90b10d19efee" msprop:DbColumnName="PK_CAUSE" msprop:FriendlyName="PK_CAUSE" type="xs:int" />
+                  <xs:element name="CAUSE" msprop:design-time-name="b84ad94f-c210-42ac-997c-b82e0c53693c" msprop:DbColumnName="CAUSE" msprop:FriendlyName="CAUSE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="200" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Collisions_DIM_LOCATION" msprop:design-time-name="a75c47c7-d237-48e8-b57a-72b0ceeeb1c3" msprop:DbTableName="DIM_LOCATION" msprop:FriendlyName="DIM_LOCATION" msprop:DbSchemaName="Collisions" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PK_LOCATION" msprop:design-time-name="908ec6e1-ed55-4f34-aa09-8d3b259b0e1a" msprop:DbColumnName="PK_LOCATION" msprop:FriendlyName="PK_LOCATION" type="xs:int" />
+                  <xs:element name="DISTRICT" msprop:design-time-name="9c2f8c53-4384-491b-9c66-68876c765c4b" msprop:DbColumnName="DISTRICT" msprop:FriendlyName="DISTRICT" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="STREET" msprop:design-time-name="06e8734b-f9fa-435a-ac85-93473a03eea1" msprop:DbColumnName="STREET" msprop:FriendlyName="STREET" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Collisions_DIM_TIME" msprop:design-time-name="0b194d04-1334-49f7-ac2e-266d83e3269b" msprop:DbTableName="DIM_TIME" msprop:FriendlyName="DIM_TIME" msprop:DbSchemaName="Collisions" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PK_TIME" msprop:design-time-name="5d59bb61-2562-4c3a-8ec0-eeeaa34d7e3a" msprop:DbColumnName="PK_TIME" msprop:FriendlyName="PK_TIME" type="xs:int" />
+                  <xs:element name="MONTH" msprop:design-time-name="460dec5d-ae29-4c6e-8acd-69cecbe209a3" msprop:DbColumnName="MONTH" msprop:FriendlyName="MONTH" type="xs:int" minOccurs="0" />
+                  <xs:element name="DAY" msprop:design-time-name="c35eb605-328a-4e4e-a98a-b0473677b990" msprop:DbColumnName="DAY" msprop:FriendlyName="DAY" type="xs:int" minOccurs="0" />
+                  <xs:element name="HOUR" msprop:design-time-name="bde0f066-550f-4901-b880-10f3fc04beb5" msprop:DbColumnName="HOUR" msprop:FriendlyName="HOUR" type="xs:int" minOccurs="0" />
+                  <xs:element name="DAY_OF_WEEK_NAME" msprop:design-time-name="f03afd14-9957-437e-b017-edee892d4894" msprop:DbColumnName="DAY_OF_WEEK_NAME" msprop:FriendlyName="DAY_OF_WEEK_NAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Collisions_DIM_VEHICLE_TYPE" msprop:design-time-name="40eda4d1-7a71-46b0-89de-5a7bc590051c" msprop:DbTableName="DIM_VEHICLE_TYPE" msprop:FriendlyName="DIM_VEHICLE_TYPE" msprop:DbSchemaName="Collisions" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PK_VEHICLE_TYPE" msprop:design-time-name="790e8466-cb06-4bfc-bc08-4e9ebcaa3a35" msprop:DbColumnName="PK_VEHICLE_TYPE" msprop:FriendlyName="PK_VEHICLE_TYPE" type="xs:int" />
+                  <xs:element name="TYPE" msprop:design-time-name="e96deafa-804d-4354-8c7c-ae0bf4bf7d8a" msprop:DbColumnName="TYPE" msprop:FriendlyName="TYPE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Collisions_DIM_VEHICLES_BRIDGE" msprop:design-time-name="fe3528b4-f4b5-4b93-abfd-3d61e1a88f97" msprop:DbTableName="DIM_VEHICLES_BRIDGE" msprop:FriendlyName="DIM_VEHICLES_BRIDGE" msprop:DbSchemaName="Collisions" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PK_VEHICLES_BRIDGE" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="3d35782b-b907-42b2-baf6-a423158f62c6" msprop:DbColumnName="PK_VEHICLES_BRIDGE" msprop:FriendlyName="PK_VEHICLES_BRIDGE" type="xs:int" />
+                  <xs:element name="FK_FACT_CRASHES" msprop:design-time-name="10b91c94-31fb-41d1-ba1a-d204b1a8be0c" msprop:DbColumnName="FK_FACT_CRASHES" msprop:FriendlyName="FK_FACT_CRASHES" type="xs:int" />
+                  <xs:element name="FK_DIM_CAUSE" msprop:design-time-name="14c001f0-a5e4-44d5-90df-4f155f534fcb" msprop:DbColumnName="FK_DIM_CAUSE" msprop:FriendlyName="FK_DIM_CAUSE" type="xs:int" />
+                  <xs:element name="FK_DIM_VEHICLE_TYPE" msprop:design-time-name="0a3783a0-4873-4cca-9364-98ffab8c608b" msprop:DbColumnName="FK_DIM_VEHICLE_TYPE" msprop:FriendlyName="FK_DIM_VEHICLE_TYPE" type="xs:int" />
+                  <xs:element name="RANK" msprop:design-time-name="fcca40a2-c4e9-4e70-ba5b-4d4cd95962ce" msprop:DbColumnName="RANK" msprop:FriendlyName="RANK" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Collisions_DIM_WEATHER" msprop:design-time-name="9ff2677b-5761-496c-b58f-b4d097ab7f42" msprop:DbTableName="DIM_WEATHER" msprop:FriendlyName="DIM_WEATHER" msprop:DbSchemaName="Collisions" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PK_WEATHER" msprop:design-time-name="8785eab7-1cb2-4d75-8bff-dfe12fd26042" msprop:DbColumnName="PK_WEATHER" msprop:FriendlyName="PK_WEATHER" type="xs:int" />
+                  <xs:element name="PRECIPITATION" msprop:design-time-name="5fb09736-b13a-4f2c-ba80-1d2a109c9be1" msprop:DbColumnName="PRECIPITATION" msprop:FriendlyName="PRECIPITATION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SNOW" msprop:design-time-name="eff9b56e-2565-4b24-83ae-25c336625827" msprop:DbColumnName="SNOW" msprop:FriendlyName="SNOW" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TEMPERATURE" msprop:design-time-name="ab19f7db-6a9b-4b5f-a99b-77f4abdce20b" msprop:DbColumnName="TEMPERATURE" msprop:FriendlyName="TEMPERATURE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Collisions_FACT_CRASHES" msprop:design-time-name="15981487-16d9-4682-ba05-5fa9d7617499" msprop:DbTableName="FACT_CRASHES" msprop:FriendlyName="FACT_CRASHES" msprop:DbSchemaName="Collisions" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PK_CRASH" msprop:design-time-name="aede9746-9d5c-4f2a-b607-73daa1e714f6" msprop:DbColumnName="PK_CRASH" msprop:FriendlyName="PK_CRASH" type="xs:int" />
+                  <xs:element name="KILLED_PEDESTRIANS" msprop:design-time-name="21afed08-d76c-4286-98b9-231975a0a594" msprop:DbColumnName="KILLED_PEDESTRIANS" msprop:FriendlyName="KILLED_PEDESTRIANS" type="xs:int" minOccurs="0" />
+                  <xs:element name="INJURED_PEDESTRIANS" msprop:design-time-name="fee9bec7-2a96-4050-a452-30fd527eb24c" msprop:DbColumnName="INJURED_PEDESTRIANS" msprop:FriendlyName="INJURED_PEDESTRIANS" type="xs:int" minOccurs="0" />
+                  <xs:element name="KILLED_CYCLIST" msprop:design-time-name="a6dc7ff1-79e6-4602-9742-7cb1590db4ac" msprop:DbColumnName="KILLED_CYCLIST" msprop:FriendlyName="KILLED_CYCLIST" type="xs:int" minOccurs="0" />
+                  <xs:element name="INJURED_CYCLIST" msprop:design-time-name="d4aa0a81-8b60-4f3c-b626-fb907923ffd5" msprop:DbColumnName="INJURED_CYCLIST" msprop:FriendlyName="INJURED_CYCLIST" type="xs:int" minOccurs="0" />
+                  <xs:element name="KILLED_PERSONS" msprop:design-time-name="40f9c82a-b00a-4b18-beea-b42ab17dd2b7" msprop:DbColumnName="KILLED_PERSONS" msprop:FriendlyName="KILLED_PERSONS" type="xs:int" minOccurs="0" />
+                  <xs:element name="INJURED_PERSONS" msprop:design-time-name="b881e657-ae45-4380-8191-dab16b32fe8a" msprop:DbColumnName="INJURED_PERSONS" msprop:FriendlyName="INJURED_PERSONS" type="xs:int" minOccurs="0" />
+                  <xs:element name="VEHICLES" msprop:design-time-name="77dfb8fb-badf-4473-849d-3deb6271329c" msprop:DbColumnName="VEHICLES" msprop:FriendlyName="VEHICLES" type="xs:int" minOccurs="0" />
+                  <xs:element name="FK_TIME" msprop:design-time-name="3201830c-2717-43b2-ac38-d2a39feb92f4" msprop:DbColumnName="FK_TIME" msprop:FriendlyName="FK_TIME" type="xs:int" minOccurs="0" />
+                  <xs:element name="FK_LOCATION" msprop:design-time-name="78fca331-a9f2-491f-bea8-82d8e55c35da" msprop:DbColumnName="FK_LOCATION" msprop:FriendlyName="FK_LOCATION" type="xs:int" minOccurs="0" />
+                  <xs:element name="FK_WEATHER" msprop:design-time-name="9aee593a-27ed-4288-9967-1fcab5a499a6" msprop:DbColumnName="FK_WEATHER" msprop:FriendlyName="FK_WEATHER" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//Collisions_DIM_CAUSE" />
+          <xs:field xpath="PK_CAUSE" />
+        </xs:unique>
+        <xs:unique name="Collisions_DIM_LOCATION_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//Collisions_DIM_LOCATION" />
+          <xs:field xpath="PK_LOCATION" />
+        </xs:unique>
+        <xs:unique name="Collisions_DIM_TIME_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//Collisions_DIM_TIME" />
+          <xs:field xpath="PK_TIME" />
+        </xs:unique>
+        <xs:unique name="Collisions_DIM_VEHICLE_TYPE_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//Collisions_DIM_VEHICLE_TYPE" />
+          <xs:field xpath="PK_VEHICLE_TYPE" />
+        </xs:unique>
+        <xs:unique name="Collisions_DIM_VEHICLES_BRIDGE_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//Collisions_DIM_VEHICLES_BRIDGE" />
+          <xs:field xpath="PK_VEHICLES_BRIDGE" />
+        </xs:unique>
+        <xs:unique name="Collisions_DIM_WEATHER_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//Collisions_DIM_WEATHER" />
+          <xs:field xpath="PK_WEATHER" />
+        </xs:unique>
+        <xs:unique name="Collisions_FACT_CRASHES_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//Collisions_FACT_CRASHES" />
+          <xs:field xpath="PK_CRASH" />
+        </xs:unique>
+        <xs:keyref name="FK__FACT_CRAS__FK_LO__3BFFE745" refer="Collisions_DIM_LOCATION_Constraint1">
+          <xs:selector xpath=".//Collisions_FACT_CRASHES" />
+          <xs:field xpath="FK_LOCATION" />
+        </xs:keyref>
+        <xs:keyref name="FK__FACT_CRAS__FK_WE__3CF40B7E" refer="Collisions_DIM_WEATHER_Constraint1">
+          <xs:selector xpath=".//Collisions_FACT_CRASHES" />
+          <xs:field xpath="FK_WEATHER" />
+        </xs:keyref>
+        <xs:keyref name="FK__FACT_CRAS__FK_TI__3B0BC30C" refer="Collisions_DIM_TIME_Constraint1">
+          <xs:selector xpath=".//Collisions_FACT_CRASHES" />
+          <xs:field xpath="FK_TIME" />
+        </xs:keyref>
+        <xs:keyref name="FK__DIM_VEHIC__FK_FA__3DE82FB7" refer="Collisions_FACT_CRASHES_Constraint1">
+          <xs:selector xpath=".//Collisions_DIM_VEHICLES_BRIDGE" />
+          <xs:field xpath="FK_FACT_CRASHES" />
+        </xs:keyref>
+        <xs:keyref name="FK__DIM_VEHIC__FK_DI__3EDC53F0" refer="Collisions_DIM_VEHICLE_TYPE_Constraint1">
+          <xs:selector xpath=".//Collisions_DIM_VEHICLES_BRIDGE" />
+          <xs:field xpath="FK_DIM_VEHICLE_TYPE" />
+        </xs:keyref>
+        <xs:keyref name="FK__DIM_VEHIC__FK_DI__3FD07829" refer="Constraint1">
+          <xs:selector xpath=".//Collisions_DIM_VEHICLES_BRIDGE" />
+          <xs:field xpath="FK_DIM_CAUSE" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <Crashes2016 xmlns="" />
+  </Schema>
+</DataSourceView>
